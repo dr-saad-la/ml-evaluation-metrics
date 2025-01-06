@@ -180,7 +180,7 @@ If you use this work in your research, please cite:
 @misc{laouadi2024mlmetrics,
     author = {Laouadi, Saad},
     title = {Machine Learning Evaluation Metrics},
-    year = {2024},
+    year = {2025},
     publisher = {GitHub},
     journal = {GitHub repository},
     howpublished = {\url{https://github.com/dr-saad-la/ml-evaluation-metrics}}
