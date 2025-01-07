@@ -1,0 +1,58 @@
+[tool.poetry]
+name = "ml-metrics"
+version = "0.1.0"
+description = "Comprehensive machine learning evaluation metrics"
+authors = ["Dr.Saad.L <56449463+dr-saad-la@users.noreply.github.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+packages = [
+    { include = "ml_metrics", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.2.1"
+scipy = "^1.15.0"
+scikit-learn = "^1.6.0"
+pandas = "^2.2.3"
+urllib3 = "^2.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+black = "^24.10.0"
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+mypy = "^1.14.1"
+pre-commit = "^4.0.1"
+
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^8.1.3"
+sphinx-rtd-theme = "^3.0.2"
+nbsphinx = "^0.9.6"
+jupyter = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--verbose --cov=ml_metrics --cov-report=term-missing"
+
