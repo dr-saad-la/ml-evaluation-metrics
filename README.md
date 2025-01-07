@@ -81,11 +81,25 @@ A comprehensive guide to evaluation metrics in machine learning, covering everyt
 
 ## 🚀 Installation
 
+### Using Poetry (recommended)
+```bash
+# Clone the repository
+git clone https://github.com/dr-saad-la/ml-evaluation-metrics.git
+cd ml-evaluation-metrics
+
+# Install with Poetry
+poetry install
+```
+
+### Using Pip
+
 ```bash
 git clone https://github.com/dr-saad-laouadi/ml-evaluation-metrics.git
 cd ml-evaluation-metrics
 pip install -r requirements.txt
 ```
+
+
 ## 📖 Documentation Structure
 
 Each metric in this repository is thoroughly documented with:

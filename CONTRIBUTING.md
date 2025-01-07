@@ -6,10 +6,11 @@ First off, thank you for considering contributing to ML Evaluation Metrics! It's
 
 1. [Code of Conduct](#code-of-conduct)
 2. [Getting Started](#getting-started)
-3. [How Can I Contribute?](#how-can-i-contribute)
-4. [Style Guidelines](#style-guidelines)
-5. [Development Process](#development-process)
-6. [Documentation Guidelines](#documentation-guidelines)
+3. [Development Setup](#development-setup)
+4. [How Can I Contribute?](#how-can-i-contribute)
+5. [Style Guidelines](#style-guidelines)
+6. [Development Process](#development-process)
+7. [Documentation Guidelines](#documentation-guidelines)
 
 ## Code of Conduct
 
@@ -19,28 +20,60 @@ This project and everyone participating in it is governed by our [Code of Conduc
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.12+
 - NumPy
 - Pandas
 - Scikit-learn
 - PyTest (for running tests)
 
-### Setting Up Development Environment
+## Development Setup
 
-1. Fork the repository
-2. Clone your fork:
-   ```bash
-   git clone https://github.com/your-username/ml-evaluation-metrics.git
-   ```
-3. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-4. Install development dependencies:
-   ```bash
-   pip install -r requirements-dev.txt
-   ```
+We support multiple ways to set up the development environment:
+
+### Using Poetry (Recommended)
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ml-evaluation-metrics.git
+cd ml-evaluation-metrics
+
+# Install with Poetry (includes dev and docs dependencies)
+poetry install --with dev,docs
+
+# Activate the virtual environment
+poetry shell
+```
+
+### Using pip
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ml-evaluation-metrics.git
+cd ml-evaluation-metrics
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install development dependencies
+pip install -r requirements-dev.txt
+```
+
+### Using Conda
+```bash
+# Clone the repository
+git clone https://github.com/your-username/ml-evaluation-metrics.git
+cd ml-evaluation-metrics
+
+# Create and activate conda environment
+conda env create -f environment.yml
+conda activate ml-metrics
+```
+
+### Setting Up Pre-commit Hooks
+
+We use pre-commit hooks to ensure code quality. After setting up your development environment, install the pre-commit hooks:
+```bash
+pre-commit install
+```
 
 ## How Can I Contribute?
 
